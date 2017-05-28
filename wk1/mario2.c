@@ -7,27 +7,21 @@ void printPyramid(int levels);
 void printHashes(int row);
 void printSpaces(int height);
 
-int main(void)
-{
+int main(void) {
     startGame();
 }
 
-void verifyLevels(int i)
-{
-    if (i < 1 || i > 23) 
-    {
+void verifyLevels(int i) {
+    if (i < 1 || i > 23) {
         printf("Try again\n");
         startGame();
-    } 
-    else 
-    {
+    } else {
         printf("You chose %i levels\n", i);
         printPyramid(i);
     }
 }
 
-void startGame(void)
-{
+void startGame(void) {
     printf("Pick a number 1 - 23\n");
     int levels = get_int();
     verifyLevels(levels);
